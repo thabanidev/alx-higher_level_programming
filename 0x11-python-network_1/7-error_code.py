@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""A script that
-- takes in a URL
-- sends a request to the URL
-- displays the body of the response.
 """
-import sys
-import requests
+Script that takes in a URL, sends a request to the URL, and displays the body of the response.
+Prints an error message if the HTTP status code is greater than or equal to 400.
+"""
 
+import requests
+import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    response = requests.get(url)
 
-    r = requests.get(url)
-    if r.status_code >= 400:
-        print("Error code: {}".format(r.status_code))
-    else:
-        print(r.text)
+    print(response.text)
+
+    if response.status_code >= 400:
+        print("Error code:", response.status_code)

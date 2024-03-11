@@ -1,62 +1,55 @@
-# Python - Network #0
+Tasks
+0. cURL body size
+Write a Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
 
-In this networking project, I used `curl` in Bash scripts to send various types
-of HTTP headers. In the process, I learned about how URL's work, domain names,
-the many different HTTP request/repsonse header fields and status codes, and
-how to utilize cookies.
+The size must be displayed in bytes
+You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
 
-Task six was an algorithm challenge separate from the overall project theme
-completed in Python.
+1. cURL to the end
+Write a Bash script that takes in a URL, sends a GET request to the URL, and displays the body of the response
 
+Display only body of a 200 status code response
+You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
 
-## Tasks :page_with_curl:
+2. cURL Method
+Write a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response
 
-NOTE: The `curl` behavior in all Bash scripts were written to interact with a
-server set up on a container.
+You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
 
-* **0. cURL body size**
-  [0-body_size.sh](./0-body_size.sh): Bash script that sends a `GET` request to
-  a given URL and displays the size of the response body in bytes.
+3. cURL only methods
+Write a Bash script that takes in a URL and displays all HTTP methods the server will accept.
 
-* **1. cURL to the end**
-  * [1-body.sh](./1-body.sh): Bash script that sends a `GET` request to a given
-  URL and displays the response body for a `200` status code response.
+You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
 
-* **2. cURL Method**
-  * [2-delete.sh](./2-delete.sh): Bash script that sends a `DELETE` request to
-  a given URL and displays the response body.
+4. cURL headers
+Write a Bash script that takes in a URL as an argument, sends a GET request to the URL, and displays the body of the response
 
-* **3. cURL only methods**
-  * [3-methods.sh](./3-methods.sh): Bash script that displays all HTTP methods
-  the server of a given URL will accept.
+A header variable X-School-User-Id must be sent with the value 98
+You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
 
-* **4. cURL headers**
-  * [4-header.sh](./4-header.sh): Bash script that sends a `GET` request to a
-  given URL with a header variable `X-HolbertonSchool-User-Id=98` and displays
-  the response body.
+5. cURL POST parameters
+Write a Bash script that takes in a URL, sends a POST request to the passed URL, and displays the body of the response
 
-* **5. cURL POST parameters**
-  * [5-post_params.sh](./5-post_params.sh): Bash script that sends a `POST`
-  request to a given URL with the variables `email=test.gmail.com` and
-  `subject=I will always be here for PLD` and displays the response body.
+A variable email must be sent with the value test@gmail.com
+A variable subject must be sent with the value I will always be here for PLD
+You have to use curl
+Please test your script in the sandbox provided, using the web server running on port 5000
 
-* **6. Find a peak**
-  * [6-peak.py](./6-peak.py): [Technical interview preparation] - Python
-  program that finds a peak in a list of unsorted integers.
-  * [6-peak.txt](./6-peak.txt): Text file containing the complexity of the
-  algorithm.
+6. Find a peak
+Technical interview preparation:
 
-* **7. Only status code**
-  * [100-status_code.sh](./100-status_code.sh): Bash script that sends a `GET`
-  request to a given URL without using pipes, redirections, `;`, or `&&` and
-  displays the status code of the response.
+You are not allowed to google anything
+Whiteboard first
+Write a function that finds a peak in a list of unsorted integers.
 
-* **8. cURL a JSON file**
-  * [101-post_json.sh](./101-post_json.sh): Bash script that sends a JSON `POST`
-  request with the contents of a provided file to a given URL, and displays the
-  response body.
-
-* **9. Catch me if you can!**
-  * [102-catch_me.sh](./102-catch_me.sh): Bash script that sends a request to
-  `0.0.0.0:5000/catch_me` that causes the server to respond with a message
-  containing `You got me!` in the repsonse body.
+Prototype: def find_peak(list_of_integers):
+You are not allowed to import any module
+Your algorithm must have the lowest complexity (hint: you don’t need to go through all numbers to find a peak)
+6-peak.py must contain the function
+6-peak.txt must contain the complexity of your algorithm: O(log(n)), O(n), O(nlog(n)) or O(n2)
+Note: there may be more than one peak in the list

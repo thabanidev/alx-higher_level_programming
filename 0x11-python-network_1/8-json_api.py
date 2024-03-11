@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-"""A script tha:
-- takes in a letter
-- sends POST request to http://0.0.0.0:5000/search_user
-with the letter as a parameter.
 """
-import sys
-import requests
+Script that takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
+Displays the id and name if the response body is properly JSON formatted and not empty.
+"""
 
+import requests
+import sys
 
 if __name__ == "__main__":
-    letter = "" if len(sys.argv) == 1 else sys.argv[1]
-    payload = {"q": letter}
+    url = "http://0.0.0.0:5000/search_user"
+    q = sys.argv[1] if len(sys.argv) > 1 else ""
 
-    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        response = r.json()
-        if response == {}:
-            print("No result")
+        response = requests.post(url, data={'q': q})
+        data = response.json()
+
+        if data:
+            print("[{}] {}".format(data['id'], data['name']))
         else:
-            print("[{}] {}".format(response.get("id"), response.get("name")))
+            print("No result")
     except ValueError:
         print("Not a valid JSON")
