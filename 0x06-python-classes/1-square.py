@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Provides access to the square class with a constructor and private attributes."""
+"""Defines a Square class"""
 
 
 class Square:
-    """A square class with a constructor and private attribute."""
+    """Represents a square."""
 
     def __init__(self, size):
         self.__size = size
