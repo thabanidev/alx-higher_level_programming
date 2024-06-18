@@ -17,7 +17,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except (ZeroDivisionError, TypeError, IndexError) as ex:
             result = 0
             if isinstance(ex, ZeroDivisionError):
-                print("division by zero")
+                print("division by 0")
             elif isinstance(ex, TypeError):
                 print("wrong type")
             elif isinstance(ex, IndexError):
