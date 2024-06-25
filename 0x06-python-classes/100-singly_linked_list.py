@@ -36,7 +36,7 @@ class Node:
             value (Node): next node
         """
         if value is not None and not isinstance(value, Node):
-            raise TypeError("next_node must be a Node object (None)")
+            raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
