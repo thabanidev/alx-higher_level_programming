@@ -1,6 +1,18 @@
 #!/usr/bin/python3
+"""Provides access to Square class 
+
+    Raises:
+        TypeError: Wrong type
+        ValueError: Wrong value
+
+    Returns:
+        (Square): square class
+"""
+
+
 class Square:
     """Defines a square"""
+
     def __init__(self, size=0, position=(0, 0)):
         """Initialises the data"""
         self.size = size
@@ -33,9 +45,9 @@ class Square:
                 print()
             for i in range(self.__size):
                 for x in range(self.__position[0]):
-                    print(' ', end='')
+                    print(" ", end="")
                 for j in range(self.__size):
-                    print('#', end='')
+                    print("#", end="")
                 print()
 
     @property
