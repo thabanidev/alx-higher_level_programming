@@ -35,17 +35,18 @@ class Node:
         Args:
             value (Node): next node
         """
-        if not value is None or not isinstance(value, Node):
-            raise TypeError("next_node must be a Node object")
+        if value is not None and not isinstance(value, Node):
+            raise TypeError("next_node must be a Node object (None)")
         self.__next_node = value
+
 
 class SinglyLinkedList:
     """Represents a singly linked list"""
-    
+
     def __init__(self) -> None:
         """Instantiates Singly Linked List"""
         self.__head = None
-        
+
     def sorted_insert(self, value):
         """Inserts a new Node into the correct sorted position."""
         new_node = Node(value)
@@ -58,5 +59,12 @@ class SinglyLinkedList:
                 current = current.next_node
             new_node.next_node = current.next_node
             current.next_node = new_node
-        
-    
+
+    def __str__(self):
+        """Returns a string representation of the linked list."""
+        values = []
+        current = self.__head
+        while current:
+            values.append(str(current.data))
+            current = current.next_node
+        return "\n".join(values)
