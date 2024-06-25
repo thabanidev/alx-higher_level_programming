@@ -10,7 +10,7 @@ class Square:
 
         Args:
             size (int): The size of the square.
-            position (tuple): The (x, y) coordinates of the square's top-left corner.
+            position (tuple): The (x, y) coordinates of the square
         """
         self.size = size
         self.position = position
