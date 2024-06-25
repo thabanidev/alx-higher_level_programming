@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Provides access to Square class 
 
     Raises:
@@ -28,7 +29,7 @@ class Square:
         return self.__size
 
     @size.setter
-    def size(self, value: int):
+    def size(self, value):
         """Setter method"""
         self.__size = value
         if not isinstance(value, int):
@@ -56,7 +57,7 @@ class Square:
         return self.__position
 
     @position.setter
-    def position(self, value: tuple[int, int]):
+    def position(self, value):
         """Setter method"""
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
